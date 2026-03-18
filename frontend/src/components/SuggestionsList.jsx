@@ -7,8 +7,8 @@ export function SuggestionsList({ suggestions, isLoading }) {
     <div className="card">
       <div className="cardHeader">
         <div>
-          <div className="cardTitle">Suggestions</div>
-          <div className="cardHint">Personalized next steps based on the model output.</div>
+          <div className="cardTitle">How to Improve</div>
+          <div className="cardHint">Practical steps you can take next.</div>
         </div>
       </div>
 
