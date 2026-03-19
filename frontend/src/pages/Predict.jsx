@@ -6,7 +6,8 @@ import { SideNavigation } from "../components/SideNavigation.jsx";
 import { ProbabilityChart } from "../components/charts/ProbabilityChart.jsx";
 import { SkillRadarChart } from "../components/charts/SkillRadarChart.jsx";
 
-const PREDICT_URL = "http://127.0.0.1:8000/predict";
+const API_BASE_URL = (import.meta?.env?.VITE_API_BASE_URL || "http://127.0.0.1:8000").replace(/\/$/, "");
+const PREDICT_URL = `${API_BASE_URL}/predict`;
 
 const BRANCH_OPTIONS = ["CSE", "Civil", "ECE", "IT", "ME"];
 
@@ -179,7 +180,15 @@ export function Predict() {
         }
       }, 150);
     } catch (err) {
-      setApiError(err instanceof Error ? err.message : "Something went wrong");
+      const rawMsg = err instanceof Error ? err.message : "Something went wrong";
+      const isNetworkError =
+        err instanceof TypeError ||
+        /failed to fetch|networkerror|load failed/i.test(String(rawMsg));
+      setApiError(
+        isNetworkError
+          ? `Cannot reach the prediction API at ${PREDICT_URL}. Make sure the backend is running and accessible.`
+          : rawMsg,
+      );
       setResult(null);
       setProbability(null);
       setSuggestions([]);
@@ -230,7 +239,7 @@ export function Predict() {
               onBlur={handleBlur}
               onSubmit={handleSubmit}
               loading={loading}
-              disabled={!isFormValid || loading}
+              disabled={loading}
               branchOptions={BRANCH_OPTIONS}
               fieldRules={FIELD_RULES}
             />
@@ -269,7 +278,6 @@ export function Predict() {
               <div className="panelHeader">
                 <div>
                   <div className="panelTitle">Insights</div>
-                  <div className="panelHint">Quick interpretation for presentation and understanding.</div>
                 </div>
               </div>
               <div className="insightsText">

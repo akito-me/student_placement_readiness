@@ -461,18 +461,18 @@
 .homePage {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 52px;
   padding-bottom: 26px;
 }
 
 .heroSection {
-  padding: 26px 0 4px;
+  padding: 34px 0 8px;
 }
 
 .heroGrid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: 18px;
+  gap: 28px;
   align-items: center;
 }
 
@@ -484,7 +484,7 @@
 }
 
 .heroHeading {
-  margin: 10px 0 8px;
+  margin: 12px 0 10px;
   font-size: 44px;
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -494,12 +494,12 @@
   margin: 0;
   color: rgba(255, 255, 255, 0.78);
   font-size: 15px;
-  max-width: 640px;
-  line-height: 1.6;
+  max-width: 56ch;
+  line-height: 1.7;
 }
 
 .heroButtons {
-  margin-top: 16px;
+  margin-top: 20px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -514,7 +514,7 @@
   border-radius: 18px;
   border: 1px solid rgba(148, 163, 184, 0.22);
   background: rgba(2, 6, 23, 0.55);
-  padding: 16px;
+  padding: 18px;
   backdrop-filter: blur(14px);
 }
 
@@ -527,7 +527,7 @@
   margin: 0;
   padding-left: 18px;
   color: rgba(255, 255, 255, 0.78);
-  line-height: 1.65;
+  line-height: 1.75;
   font-size: 13px;
 }
 
@@ -543,8 +543,8 @@
 
 .sectionHeader {
   display: grid;
-  gap: 6px;
-  margin-bottom: 12px;
+  gap: 10px;
+  margin-bottom: 18px;
 }
 
 .sectionTitle {
@@ -556,33 +556,35 @@
   margin: 0;
   color: rgba(255, 255, 255, 0.68);
   font-size: 13px;
-  max-width: 720px;
+  max-width: 72ch;
+  line-height: 1.65;
 }
 
 .sectionBody {
   color: rgba(255, 255, 255, 0.82);
-  line-height: 1.7;
+  line-height: 1.75;
+  max-width: 72ch;
 }
 
 .stepsFlow {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 16px;
 }
 
 .stepItem {
   border-radius: 16px;
   border: 1px solid rgba(148, 163, 184, 0.16);
   background: rgba(255, 255, 255, 0.04);
-  padding: 14px;
-  min-height: 132px;
+  padding: 18px;
+  min-height: 144px;
 }
 
 .stepTop {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .stepNumber {
@@ -609,7 +611,7 @@
 }
 
 .stepDesc {
-  margin-top: 6px;
+  margin-top: 8px;
   color: rgba(255, 255, 255, 0.68);
   font-size: 13px;
   line-height: 1.5;
@@ -618,14 +620,14 @@
 .featureGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  gap: 16px;
 }
 
 .featureBox {
   border-radius: 16px;
   border: 1px solid rgba(148, 163, 184, 0.16);
   background: rgba(255, 255, 255, 0.04);
-  padding: 14px;
+  padding: 18px;
 }
 
 .featureBoxTitle {
@@ -633,10 +635,10 @@
 }
 
 .featureBoxDesc {
-  margin-top: 6px;
+  margin-top: 8px;
   color: rgba(255, 255, 255, 0.68);
   font-size: 13px;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .ctaSection {
@@ -646,14 +648,14 @@
     radial-gradient(900px 340px at 10% 50%, rgba(124, 92, 255, 0.20), transparent 60%),
     radial-gradient(900px 340px at 90% 50%, rgba(79, 209, 197, 0.16), transparent 60%),
     rgba(2, 6, 23, 0.55);
-  padding: 16px;
+  padding: 20px;
 }
 
 .ctaInner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
 }
 
 .ctaTitle {
@@ -665,19 +667,20 @@
   margin-top: 4px;
   color: rgba(255, 255, 255, 0.68);
   font-size: 13px;
+  line-height: 1.6;
 }
 
 .teamGridClean {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
+  gap: 16px;
 }
 
 .teamCardClean {
   border-radius: 16px;
   border: 1px solid rgba(148, 163, 184, 0.16);
   background: rgba(255, 255, 255, 0.04);
-  padding: 14px;
+  padding: 18px;
 }
 
 .teamName {
@@ -687,19 +690,20 @@
 .teamMeta {
   color: rgba(255, 255, 255, 0.68);
   font-size: 13px;
-  margin-top: 4px;
+  margin-top: 6px;
+  line-height: 1.55;
 }
 
 .siteFooter {
-  padding-top: 18px;
+  padding-top: 22px;
   border-top: 1px solid rgba(148, 163, 184, 0.14);
 }
 
 .footerGrid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 12px;
-  padding: 10px 2px 0;
+  gap: 16px;
+  padding: 8px 2px 0;
 }
 
 .footerTitle {
@@ -714,8 +718,8 @@
 }
 
 .footerBottom {
-  margin-top: 14px;
-  padding: 12px 2px 0;
+  margin-top: 16px;
+  padding: 10px 2px 0;
   border-top: 1px solid rgba(148, 163, 184, 0.10);
 }
 

@@ -25,8 +25,7 @@ export function Home() {
             <div className="heroKicker">Academic mini-product • ML + Web</div>
             <h1 className="heroHeading">Placement Prediction System</h1>
             <p className="heroLead">
-              A machine learning based system that predicts student placement readiness and provides
-              improvement suggestions based on academic, skill, and profile-related features.
+              ML-based student placement readiness prediction with smart improvement suggestions.
             </p>
             <div className="heroButtons">
               <button type="button" className="btnPrimary" onClick={goToPredict}>
@@ -52,7 +51,7 @@ export function Home() {
                 <li>Placement prediction (Likely / Not likely)</li>
                 <li>Probability percentage</li>
                 <li>How-to-improve suggestions</li>
-                <li>Charts for Prediction </li>
+                <li>Charts & insights</li>
               </ul>
             </div>
             <div className="previewGlow" />
@@ -64,10 +63,9 @@ export function Home() {
         <div className="sectionHeader">
           <h2 className="sectionTitle">About</h2>
           <p className="sectionSubtitle">
-            Understand placement readiness and the areas to improve before campus recruitment.
-            Many students are unsure how placement-ready they are and which areas they should focus on.
-            This project estimates placement readiness using academic and skill-based inputs and provides
-            improvement suggestions.
+            This project helps students estimate placement readiness.
+            It analyzes academic and skill-based inputs.
+            It also provides suggestions for improvement.
           </p>
         </div>
         <div className="sectionBody">
@@ -86,20 +84,20 @@ export function Home() {
         <div className="stepsFlow">
           {[
             {
-              t: "Enter student details",
-              d: "Fill in academic performance and skill indicators.",
+              t: "Enter details",
+              d: "Add academic and skill inputs.",
             },
             {
-              t: "Send data to backend",
-              d: "Frontend sends the form data to the ML API.",
+              t: "Send data",
+              d: "Form data goes to the backend.",
             },
             {
-              t: "ML model predicts readiness",
-              d: "Model calculates prediction and probability score.",
+              t: "Predict result",
+              d: "ML model evaluates readiness.",
             },
             {
-              t: "Show result & suggestions",
-              d: "Dashboard displays output with improvement points.",
+              t: "View insights",
+              d: "See probability and suggestions.",
             },
           ].map((s, i) => (
             <div className="stepItem" key={s.t}>
@@ -121,10 +119,10 @@ export function Home() {
         </div>
         <div className="featureGrid">
           {[
-            { t: "Placement Prediction", d: "Binary prediction: likely placed or not likely placed." },
-            { t: "Probability Score", d: "Percentage-based confidence for the prediction." },
-            { t: "Personalized Suggestions", d: "Backend-generated improvement points." },
-            { t: "Interactive Insights", d: "Charts for probability and skill radar analysis." },
+            { t: "Placement Prediction", d: "Predicts likely placement outcome." },
+            { t: "Probability Score", d: "Shows placement confidence." },
+            { t: "Suggestions", d: "Provides improvement tips." },
+            { t: "Interactive Charts", d: "Visualizes readiness insights." },
           ].map((f) => (
             <div className="featureBox" key={f.t}>
               <div className="featureBoxTitle">{f.t}</div>
@@ -149,18 +147,19 @@ export function Home() {
       <section className="section" id="team">
         <div className="sectionHeader">
           <h2 className="sectionTitle">Team / Contact</h2>
-          <p className="sectionSubtitle">Replace placeholders with your actual team details.</p>
+          <p className="sectionSubtitle">Names, roles, and contact.</p>
         </div>
         <div className="teamGridClean">
           {[
-            { name: "Team Member", role: "ML model & backend", dept: "Department / Class", email: "email@example.com" },
-            { name: "Team Member", role: "Frontend & UI", dept: "Department / Class", email: "email@example.com" },
-            { name: "Project Guide", role: "Faculty / Mentor", dept: "Department / College", email: "email@example.com" },
+            { name: "TADVAB PRADHAN", role: "202320516", email: "tadvabpradhan2005@gmail.com" },
+            { name: "AMRIT PRIYADARSHI SWAIN", role: "202320471", email: "amritpriyadarshiswain15@gmail.com" },
+            { name: "DISHA RANI DASH", role: "202321517", email: "dishadash11@gmail.com" },
+            { name: "BIBEK LENKA", role: "202320512", email: "bibeklenka2003@gmail.com" },
+            { name: "DEBASISH PADHY", role: "Faculty / Mentor", email: "" },
           ].map((m) => (
             <div className="teamCardClean" key={m.role}>
               <div className="teamName">{m.name}</div>
               <div className="teamMeta">{m.role}</div>
-              <div className="teamMeta">{m.dept}</div>
               <div className="teamMeta">{m.email}</div>
             </div>
           ))}
@@ -171,17 +170,15 @@ export function Home() {
         <div className="footerGrid">
           <div>
             <div className="footerTitle">Placement Prediction System</div>
-            <div className="footerText">Academic project website • React frontend • ML backend</div>
+            <div className="footerText">Academic project • React + ML</div>
           </div>
           <div>
             <div className="footerTitle">Contact</div>
-            <div className="footerText">team@example.com</div>
-            <div className="footerText">Department / College (placeholder)</div>
+            <div className="footerText">tadvabpradhan2005@gmail.com</div>
           </div>
           <div>
             <div className="footerTitle">Presented by</div>
-            <div className="footerText">Student team names (placeholder)</div>
-            <div className="footerText">Guide/Faculty (placeholder)</div>
+            <div className="footerText">team placement</div>
           </div>
         </div>
         <div className="footerBottom">
